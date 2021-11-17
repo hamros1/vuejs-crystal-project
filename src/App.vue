@@ -8,7 +8,20 @@
 </template>
 
 <script>
+import {
+  Menu,
+  MenuButton,
+  MenuItems,
+  MenuItem,
+} from '@headlessui/vue'
+
 export default {
   name: 'App',
+  components: {
+    Menu,
+    MenuButton,
+    MenuItems,
+    MenuItem,
+  },
 }
 </script>
