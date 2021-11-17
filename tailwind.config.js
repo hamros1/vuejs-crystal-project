@@ -1,10 +1,17 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [],
+  mode: 'jit',
+  purge: [
+    './src/*.{js,jsx,ts,tsx,vue}',
+    './src/views/*.ecr',
+  ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+	'hero-pattern': "url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTIiIGhlaWdodD0iMTUyIiB2aWV3Qm94PSIwIDAgMTUyIDE1MiI+PGcgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBpZD0idGVtcGxlIiBmaWxsPSIjMGY3NjZlIiBmaWxsLW9wYWNpdHk9IjAuMDUiPjxwYXRoIGQ9Ik0xNTIgMTUwdjJIMHYtMmgyOHYtOEg4di0yMEgwdi0yaDhWODBoNDJ2MjBoMjB2NDJIMzB2OGg5MHYtOEg4MHYtNDJoMjBWODBoNDJ2NDBoOFYzMGgtOHY0MGgtNDJWNTBIODBWOGg0MFYwaDJ2OGgyMHYyMGg4VjBoMnYxNTB6bS0yIDB2LTI4aC04djIwaC0yMHY4aDI4ek04MiAzMHYxOGgxOFYzMEg4MnptMjAgMThoMjB2MjBoMThWMzBoLTIwVjEwSDgydjE4aDIwdjIwem0wIDJ2MThoMThWNTBoLTE4em0yMC0yMmgxOFYxMGgtMTh2MTh6bS01NCA5MnYtMThINTB2MThoMTh6bS0yMC0xOEgyOFY4MkgxMHYzOGgyMHYyMGgzOHYtMThINDh2LTIwem0wLTJWODJIMzB2MThoMTh6bS0yMCAyMkgxMHYxOGgxOHYtMTh6bTU0IDB2MThoMzh2LTIwaDIwVjgyaC0xOHYyMGgtMjB2MjBIODJ6bTE4LTIwSDgydjE4aDE4di0xOHptMi0yaDE4VjgyaC0xOHYxOHptMjAgNDB2LTE4aDE4djE4aC0xOHpNMzAgMGgtMnY4SDh2MjBIMHYyaDh2NDBoNDJWNTBoMjBWOEgzMFYwem0yMCA0OGgxOFYzMEg1MHYxOHptMTgtMjBINDh2MjBIMjh2MjBIMTBWMzBoMjBWMTBoMzh2MTh6TTMwIDUwaDE4djE4SDMwVjUwem0tMi00MEgxMHYxOGgxOFYxMHoiLz48L2c+PC9nPjwvc3ZnPgo=)"
+      },
       colors: {
 	transparent: 'transparent',
 	current: 'currentColor',
