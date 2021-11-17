@@ -14,6 +14,14 @@ get "/" do |x|
   ecr("layout")
 end
 
+get "/login" do |x|
+  ecr("layout")
+end
+
+get "/register" do |x|
+  ecr("layout")
+end
+
 public_folder "../dist"
 
 Kemal.run

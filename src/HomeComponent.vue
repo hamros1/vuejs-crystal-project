@@ -7,10 +7,10 @@
       </div>
       <div class="flex space-x-2 items-center sm:text-base text-sm">
 	<div class="flex justify-center items-center">
-	  <a href="/login" class="mr-3 flex justify-center items-center text-base font-bold tracking-widest bg-gradient-to-t from-gray-50 to-white text-black uppercase shadow-xl border border-black py-2 px-4 sm:px-4 rounded-md">
+	  <a href="/login" class="mr-3 flex justify-center items-center text-base font-bold tracking-widest bg-gradient-to-t from-gray-50 to-white text-black uppercase shadow-xl border border-black py-2 px-4 sm:px-4 rounded">
 	    Login
 	  </a>
-	  <button class="flex justify-center items-center text-base font-bold tracking-widest bg-[#0B929B] text-sm text-gray-900 uppercase shadow-xl border border-black border-opacity-60 py-2 px-4 sm:px-4 rounded-md">
+	  <button class="flex justify-center items-center text-base font-bold tracking-widest bg-[#0B929B] text-sm text-gray-900 uppercase shadow-xl border border-black border-opacity-60 py-2 px-4 sm:px-4 rounded">
 	    Sign In
 	  </button>
 	</div>

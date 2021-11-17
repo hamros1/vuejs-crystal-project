@@ -10,8 +10,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Lato'],
-      'serif': ['Lato'],
+      'sans': ['Inter'],
+      'serif': ['Inter'],
     },
     extend: {
       backgroundImage: {
