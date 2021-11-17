@@ -73,33 +73,60 @@
 	<div class="relative grid grid-cols-4 gap-4 sm:gap-12">
 	  <button type="button" class="relative group cursor-pointer focus:outline-none focus:ring focus:ring-indigo-500">
 	    <div class="absolute inset-0 flex items-center justify-center p-8">
-	      <div class="w-full h-full bg-gradient-to-br from-cyan-400 to-lightblue-500 filter blur-[6rem]">
+	      <div class="w-full h-full bg-gradient-to-br from-[#740937] to-[#d02670] filter blur-[4rem]">
 	      </div>
 	    </div>
 	    <img class="relative" src="https://img1.hulu.com/user/v3/artwork/d5e7ef8b-9492-4a85-8c6b-8f8d532e0836?base_image_bucket_name=image_manager&base_image=a9500711-842a-4e48-a0e8-f14b721b0cdd&size=600x338&format=jpeg">
+	    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-20 transition ease-in-out duration-200">
+	      <div class="bg-black bg-opacity-50 rounded-full p-0.5">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+		</svg>
+	      </div>
+	    </div>
 	  </button>
 	  <button type="button" class="relative group cursor-pointer focus:outline-none focus:ring focus:ring-indigo-500">
 	    <div class="absolute inset-0 flex items-center justify-center p-8">
-	      <div class="w-full h-full bg-gradient-to-br from-rose-400 to-pink-500 filter blur-[6rem]">
+	      <div class="w-full h-full bg-gradient-to-br from-[#740937] to-[#d02670] filter blur-[4rem]">
 	      </div>
 	    </div>
 	    <img class="relative" src="https://img1.hulu.com/user/v3/artwork/d5e7ef8b-9492-4a85-8c6b-8f8d532e0836?base_image_bucket_name=image_manager&base_image=a9500711-842a-4e48-a0e8-f14b721b0cdd&size=600x338&format=jpeg">
+	    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-20 transition ease-in-out duration-200">
+	      <div class="bg-black bg-opacity-50 rounded-full p-0.5">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+		</svg>
+	      </div>
+	    </div>
 	  </button>
 	  <button type="button" class="relative group cursor-pointer focus:outline-none focus:ring focus:ring-indigo-500">
 	    <div class="absolute inset-0 flex items-center justify-center p-8">
-	      <div class="w-full h-full bg-gradient-to-br from-emerald-400 to-teal-500 filter blur-[6rem]">
+	      <div class="w-full h-full bg-gradient-to-br from-[#740937] to-[#d02670] filter blur-[4rem]">
 	      </div>
 	    </div>
 	    <img class="relative" src="https://img1.hulu.com/user/v3/artwork/d5e7ef8b-9492-4a85-8c6b-8f8d532e0836?base_image_bucket_name=image_manager&base_image=a9500711-842a-4e48-a0e8-f14b721b0cdd&size=600x338&format=jpeg">
+	    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-20 transition ease-in-out duration-200">
+	      <div class="bg-black bg-opacity-50 rounded-full p-0.5">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+		</svg>
+	      </div>
+	    </div>
 	  </button>
 	  <button type="button" class="relative group cursor-pointer focus:outline-none focus:ring focus:ring-indigo-500">
 	    <div class="absolute inset-0 flex items-center justify-center p-8">
-	      <div class="w-full h-full bg-gradient-to-br from-amber-400 to-orange-500 filter blur-[6rem]">
+	      <div class="w-full h-full bg-gradient-to-br from-[#740937] to-[#d02670] filter blur-[4rem]">
 	      </div>
 	    </div>
 	    <img class="relative" src="https://img1.hulu.com/user/v3/artwork/d5e7ef8b-9492-4a85-8c6b-8f8d532e0836?base_image_bucket_name=image_manager&base_image=a9500711-842a-4e48-a0e8-f14b721b0cdd&size=600x338&format=jpeg">
-	  </button>
-	</div>
+	    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-20 transition ease-in-out duration-200">
+	      <div class="bg-black bg-opacity-50 rounded-full p-0.5">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+		</svg>
+	      </div>
+	    </div>
+	  </button>	</div>
       </div>
     </div>
   </div>
