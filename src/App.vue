@@ -73,28 +73,28 @@
 	<div class="relative grid grid-cols-4 gap-4 sm:gap-12">
 	  <button type="button" class="relative group cursor-pointer focus:outline-none focus:ring focus:ring-indigo-500">
 	    <div class="absolute inset-0 flex items-center justify-center p-8">
-	      <div class="w-full h-full bg-gradient-to-br from-cyan-400 to-lightblue-500 filter blur-2xl">
+	      <div class="w-full h-full bg-gradient-to-br from-cyan-400 to-lightblue-500 filter blur-[6rem]">
 	      </div>
 	    </div>
 	    <img class="relative" src="https://img1.hulu.com/user/v3/artwork/d5e7ef8b-9492-4a85-8c6b-8f8d532e0836?base_image_bucket_name=image_manager&base_image=a9500711-842a-4e48-a0e8-f14b721b0cdd&size=600x338&format=jpeg">
 	  </button>
 	  <button type="button" class="relative group cursor-pointer focus:outline-none focus:ring focus:ring-indigo-500">
 	    <div class="absolute inset-0 flex items-center justify-center p-8">
-	      <div class="w-full h-full bg-gradient-to-br from-rose-400 to-pink-500 filter blur-2xl">
+	      <div class="w-full h-full bg-gradient-to-br from-rose-400 to-pink-500 filter blur-[6rem]">
 	      </div>
 	    </div>
 	    <img class="relative" src="https://img1.hulu.com/user/v3/artwork/d5e7ef8b-9492-4a85-8c6b-8f8d532e0836?base_image_bucket_name=image_manager&base_image=a9500711-842a-4e48-a0e8-f14b721b0cdd&size=600x338&format=jpeg">
 	  </button>
 	  <button type="button" class="relative group cursor-pointer focus:outline-none focus:ring focus:ring-indigo-500">
 	    <div class="absolute inset-0 flex items-center justify-center p-8">
-	      <div class="w-full h-full bg-gradient-to-br from-emerald-400 to-teal-500 filter blur-2xl">
+	      <div class="w-full h-full bg-gradient-to-br from-emerald-400 to-teal-500 filter blur-[6rem]">
 	      </div>
 	    </div>
 	    <img class="relative" src="https://img1.hulu.com/user/v3/artwork/d5e7ef8b-9492-4a85-8c6b-8f8d532e0836?base_image_bucket_name=image_manager&base_image=a9500711-842a-4e48-a0e8-f14b721b0cdd&size=600x338&format=jpeg">
 	  </button>
 	  <button type="button" class="relative group cursor-pointer focus:outline-none focus:ring focus:ring-indigo-500">
 	    <div class="absolute inset-0 flex items-center justify-center p-8">
-	      <div class="w-full h-full bg-gradient-to-br from-amber-400 to-orange-500 filter blur-2xl">
+	      <div class="w-full h-full bg-gradient-to-br from-amber-400 to-orange-500 filter blur-[6rem]">
 	      </div>
 	    </div>
 	    <img class="relative" src="https://img1.hulu.com/user/v3/artwork/d5e7ef8b-9492-4a85-8c6b-8f8d532e0836?base_image_bucket_name=image_manager&base_image=a9500711-842a-4e48-a0e8-f14b721b0cdd&size=600x338&format=jpeg">
