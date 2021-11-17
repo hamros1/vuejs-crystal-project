@@ -3,7 +3,11 @@ require "kemal"
 root_path = ""
 
 macro ecr(xxx)
-  render "src/views/#{{{xxx}}}.ecr"
+  {% if xxx.starts_with?('_') %}
+    render "src/views/#{{{xxx}}}.ecr"
+  {% else %}
+    render "src/views/#{{{xxx}}}.ecr", "src/views/layout.ecr"
+  {% end %}
 end
 
 get "/" do |x|
