@@ -14,4 +14,6 @@ get "/" do |x|
   ecr("layout")
 end
 
+public_folder "../dist"
+
 Kemal.run
