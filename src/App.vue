@@ -5,7 +5,7 @@
     <router-link to="/register"></router-link>
     <router-link to="/dashboard"></router-link>
   </div>
-  <div id="page_wrapper" class="bg-[#1b1a20] bg-hero-pattern font-mono antialiased text-gray-400 min-h-screen flex flex-col">
+  <div class="min-h-screen optimize-legibility font-mono antialiased flex flex-col bg-[#1b1a2a] bg-hero-pattern">
     <router-view/>
   </div>
 </template>

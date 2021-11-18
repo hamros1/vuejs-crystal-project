@@ -5,8 +5,8 @@ module.exports = {
   mode: 'jit',
   plugins: [],
   purge: [
-    './src/*.{js,jsx,ts,tsx,vue}',
-    './src/views/*.ecr',
+    './src/*.{js,jsx,ts,tsx,vue,ecr}',
+    './src/views/*.{js,jsx,ts,tsx,vue,ecr}',
   ],
   theme: {
     extend: {
