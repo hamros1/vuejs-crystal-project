@@ -1,29 +1,19 @@
 <template>
-  <div class="h-screen text-white flex flex-col bg-hero-pattern">
-    <div class="flex bg-transparent border-b border-transparent items-center h-16 px-3 sm:px-5 flex-shrink-0 space-x-2">
-    </div>
-    <div class="flex flex-col items-center text-black w-full flex-grow overflow-y-scroll sm:justify-center">
-      <div class="md:shadow-xl rounded px-6 bg-gray-50 w-full max-w-sm space-y-4 py-4 md:border border-gray-50 my-5">
-	<div class="space-y-3">
-	  <label class="block relative space-y-1">
-	    <span class="mb-1 text-black">Username</span>
-	    <input class="w-full bg-gray-50 border border-gray-200 text-black px-3 py-2 rounded focus:ring-2 focus:outline-none" value="">
-	  </label>
-	  <label class="block relative space-y-1">
-	    <span class="mb-1 text-black">Password</span>
-	    <input class="w-full bg-gray-50 border border-gray-200 text-black px-3 py-2 rounded focus:ring-2 focus:outline-none" value="" type="password">
-	  </label>
-
-	  <div>
-	    <a href="/forgot-password" class="text-black cursor-pointer hover:underline focus:outline-none">
-	      Forgot your password?
-	    </a>
-	  </div>
-	  <button class="flex justify-center items-center text-base font-bold tracking-widest bg-[#0B929B] text-sm text-gray-900 uppercase shadow-xl border border-black border-opacity-60 py-2 px-4 sm:px-4 rounded w-full">
-	    Sign In
-	  </button>
+  <div class="bg-[#1b1a20] bg-hero-pattern relative z-10 flex-auto flex items-center justify-center text-sm text-center text-gray-600 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-sm">
+      <form action="/login" method="POST">
+	<div class="relative">
+	  <label class="sr-only">Email address</label>
+	  <input id="email-address" class="text-gray-900 ring-gray-900 ring-opacity-5 placeholder-gray-400 appearance-none bg-white rounded-md block w-full px-3 py-2 border border-transparent shadow ring-1 sm:text-sm mb-4 focus:border-[#22b088] focus:border-opacity-60 focus:ring-[#208f71] focus:outline-none" type="password" placeholder="Email address">
 	</div>
-      </div>
+	<div class="relative">
+	  <label class="sr-only">Password</label>
+	  <input id="password" class="text-gray-900 ring-gray-900 ring-opacity-5 placeholder-gray-400 appearance-none bg-white rounded-md block w-full px-3 py-2 border border-transparent shadow ring-1 sm:text-sm mb-4 focus:border-[#22b088] focus:border-opacity-60 focus:ring-[#208f71] focus:outline-none" type="password" placeholder="Password">
+	</div>
+	<button class="block w-full py-2 px-3 border border-[#5cceb5] border-opacity-60 rounded-md text-[#ecf4f2] font-medium bg-gradient-to-t bg-gray-700 to bg-gray-800 shadow-md sm:text-sm mb-10 hover:bg-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2daa97] focus-visible:ring-offset-2 focus-visible:ring-offset-[#caf0ef]">
+	  Log in to account
+	</button>
+      </form>
     </div>
   </div>
 </template>
