@@ -19,15 +19,12 @@
   </TabList>
 
   <TabPanels>
-  <TabPanel v-for="tab in tabs" key="tab.name">
-  {{tab.content}}
-  </TabPanel>
+    <TabPanel></TabPanel>
+    <TabPanel></TabPanel>
+    <TabPanel></TabPanel>
   </TabPanels>
   </TabGroup>
-  <div class="flex flex-col flex-grow overflow-y-auto">
-    <div class="py-16 px-10 md:px-20 lg:w-4/5 mx-auto flew-grow space-y-24">
-    </div>
-  </div>
+
 </template>
 
 <script>
@@ -36,9 +33,9 @@ import { defineComponent, h, ref, onMounted, watchEffect, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 
 let tabs = [
-  { name: 'Dashboard', content: '' },
-  { name: 'Trade', content: '' },
-  { name: 'Preferences', content: '' },
+  { name: 'Dashboard' },
+  { name: 'Trade' },
+  { name: 'Preferences' },
 ]
 
 export default {
