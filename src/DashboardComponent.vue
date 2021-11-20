@@ -1,107 +1,80 @@
 <template>
-  <TabGroup class="flex justify-between px-4 border-b border-[#5fccc1] backdrop-filter backdrop-blur-[0.05rem] sticky top-0 z-40 h-[76px] bg-black bg-opacity-50 firefox:bg-opacity-90 text-base font-semibold text-white py-5" as="div" :manual="manual">
-  <TabList class="flex items-center z-20 transition-bg duration-200 py-2">
-  <Tab
-      v-for="(tab, tabIdx) in tabs"
-      key="tab.name"
-      :disabled="tab.disabled"
-      class="group relative flex-h-full py-4 px-4 text-white text-base font-medium tracking-widest items-center justify-center focus:z-10"
-      :class="{
-	      }"
-      v-slot="{ selected }"
-      >
-      <span>{{tab.name}}</span>
-      <span
-	  aria-hidden="true"
-	  class="absolute inset-x-0 bottom-0 h-1"
-	  :class="{'bg-[#1cb384]': selected, 'bg-transparent':!selected}"/>
-  </Tab>
-  </TabList>
-  <div class="flex flex-grow">
-  </div>
-  <Menu>
-    <MenuButton class="z-30 flex items-center text-white text-base font-medium tracking-wide text-center py-4 px-4 text-[#52d1ad] fill-current stroke-1">
-    <svg xmlns="http://www.w3.org/2000/svg" class="mr-[0.9vw] h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-    </svg>
-    <span class="mr-[1.5rem]">
-      Hampus Rosencrantz
-    </span>
-    </MenuButton>
-
-    <MenuItems class="absolute z-30 top-[4rem] right-[2rem] w-56 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-    <div class="px-3 py-4">
-      <span class="text-black text-sm font-medium tracking-tighter leading-none">
-	Settings
-      </span>
-    </div>
-    <div class="px-3 py-4">
-      <span class="text-black text-sm font-medium tracking-tighter leading-none">
-	Orders
-      </span>
-    </div>
-    <div class="px-3 py-4">
-      <span class="text-black text-sm font-medium tracking-tighter leading-none">
-	Sign Out
-      </span>
-    </div>
-    </MenuItems>
-  </Menu>
-  <TabPanels>
-  <TabPanel>
-  <div class="z-40 absolute mx-auto flex flex-col items-center top-[30vh] left-1/2 -translate-x-1/2 max-w-[80vw]">
-    <div class="relative">
-      <div class="relative px-[32px] py-[84px]">
-	<h2 class="relative w-full text-center text-white">Coming Soon</h2>
-	<h2 class="relative w-full text-center text-white">Coming Soon</h2>
-	<h2 class="relative w-full text-center text-white">Coming Soon</h2>
-	<h2 class="relative w-full text-center text-white">Coming Soon</h2>
-      </div>
-    </div>
-  </div>
-    <div class="absolute inset-x-0 bottom-[110px] top-[20vh]">
-      <div class="absolute top-1/2 left-[50%] translate-x-[-50%] translate-y-[-50%] w-[810px]">
-	<div class="relative overflow-auto">
-	  <div class="flex flex-wrap p-0">
-	    <div class="relative flex flex-shrink-0 translate-z-[0px] max-w-[270px] p-[5px] w-[270px]">
-	      <div class="relative flex flex-1 flex-col">
-		<div class="relative">
-		  <div class="absolute min-w-full min-h-full object-cover -z-10 bg-black min-h-[100px]">
-		  </div>
-		</div>
-		<div class="relative flex flex-1 flex-col  justify-between p-2 min-h-[100px]">
-		</div>
-	      </div>
+  <div class="relative w-[100%] overflow-hidden h-[calc((var(--vh,1vh)*100))] bottom-[0px]">
+    <div class="z-40 absolute left-1/2 bg-opacity-50 firefox:bg-opacity-90 top-0 translate-x-[-50%] w-full mx-auto bg-[#0d1117] border-b border-emerald-200 backdrop-filter backdrop-blur-sm">
+      <TabGroup class="container d-flex mx-auto items-center justify-center" as="div" :manual="manual">
+      <TabList class="z-0 relative d-flex items-center justify-between space-x-12">
+      <Tab class="z-20 inline-block group relative overflow-hidden py-8 text-2xl font-medium tracking-widest text-white focus:z-40" v-for="(tab, tabIdx) in tabs" key="tab.name" v-slot="{selected}"><span>{{tab.name}}</span><span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-2" :class="{'bg-teal-300':selected, 'bg-transparent':!selected}"/></Tab>
+      </TabList>
+      <TabPanels>
+      <TabPanel>
+      <div class="z-0 absolute inset-0 d-flex flex-col mx-auto items-center overflow-visible top-[calc((var(--vh,11vh)+40px))] translate-y-[-50%]">
+	<div class="relative max-w-4xl w-full mx-auto">
+  <transition
+  enter-active-class="transition-all transition-fastest ease-out-quad"
+  leave-active-class="transition-all transition-faster ease-in-quad"
+  enter-class="opacity-0 scale-70"
+  enter-to-class="opacity-100 scale-100"
+  leave-class="opacity-100 scale-100"
+  leave-to-class="opacity-0 scale-70">
+  </transition>
+	  <div class="z-40 d-flex flex-col relative mx-auto px-[20px] py-[40px] filter drop-shadow text-center space-y-6">
+	    <div class="col-span-2 mx-auto pb-10">
+	      <h3 class="text-[6rem] text-emerald-200 mb-4 wh-full">$0</h3>
+	      <div class="text-4xl font-medium text-white wh-full leading-4">No Holdings</div>
 	    </div>
-
-	    <div class="relative flex flex-shrink-0 translate-z-[0px] max-w-[270px] p-[5px] w-[270px]">
-	      <div class="relative flex flex-1 flex-col">
-		<div class="relative">
-		  <div class="absolute min-w-full min-h-full object-cover -z-10 bg-black min-h-[100px]">
+	    <div class="col-span-1 mx-auto">
+	      <div class="relative d-flex flex-wrap">
+		<div class="d-flex grid grid-cols-5 w-full min-w-full space-x-6">
+		  <div class="relative py-4 d-flex items-center justify-center text-center text-base text-gray-200">
+		    <div>
+		      <div class="text-white font-medium leading-6 tracking-tight">24H Change</div>
+		      $0.00
+		    </div>
 		  </div>
-		</div>
-		<div class="relative flex flex-1 flex-col  justify-between p-2 min-h-[100px]">
-		</div>
-	      </div>
-	    </div>
 
-	    <div class="relative flex flex-shrink-0 translate-z-[0px] max-w-[270px] p-[5px] w-[270px]">
-	      <div class="relative flex flex-1 flex-col">
-		<div class="relative">
-		  <div class="absolute min-w-full min-h-full object-cover -z-10 bg-black min-h-[100px]">
+		  <div class="relative py-4 d-flex items-center justify-center text-center text-base text-gray-200">
+		    <div>
+		      <div class="text-white font-medium leading-6 tracking-tight">Highest Balance</div>
+		      $0.00
+		    </div>
 		  </div>
-		</div>
-		<div class="relative flex flex-1 flex-col  justify-between p-2 min-h-[100px]">
+
+		  <div class="relative py-4 d-flex items-center justify-center text-center text-base text-gray-200">
+		    <div>
+		      <div class="text-white font-medium leading-6 tracking-tight">Portfolio Age</div>
+		      $0.00
+		    </div>
+		  </div>
+
+		  <div class="relative py-4 d-flex items-center justify-center text-center text-base text-gray-200">
+		    <div>
+		      <div class="text-white font-medium leading-6 tracking-tight">Best 24H Asset</div>
+		      $0.00
+		    </div>
+		  </div>
+		  <div class="relative py-4 d-flex items-center justify-center text-center text-base text-gray-200">
+		    <div>
+		      <div class="text-white font-medium leading-6 tracking-tight">Worst 24H Asset</div>
+		      $0.00
+		    </div>
+		  </div>
 		</div>
 	      </div>
 	    </div>
 	  </div>
+	  <div class="z-10 absolute inset-0 bg-black opacity-60"></div>
+	  <div class="z-10 absolute inset-0 shadow-xl bg-transparent border border-black border-opacity-60"></div>
+	  <div class="z-0 absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-300 filter blur-[6rem] opacity-50"></div>
 	</div>
       </div>
+      </TabPanel>
+      </TabPanels>
+      </TabGroup>
+    </div>
+    <div class="z-[-10] absolute inset-0 overflow-hidden">
+      <div class="block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-center bg-contain bg-repeat h-[calc(100vh+200px+200px)] min-w-[calc(3600px)] wh-full bg-[#0d1117] bg-hero-pattern"></div>
+    </div>
   </div>
-  </TabPanel>
-  </TabPanels>
-  </TabGroup>
 </template>
 
 <script>
@@ -110,9 +83,9 @@ import { defineComponent, h, ref, onMounted, watchEffect, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 
 let tabs = [
-  { name: 'Tab 1' },
-  { name: 'Tab 2' },
-  { name: 'Tab 3' },
+  { name: 'Portfolio' },
+  { name: 'Wallet' },
+  { name: 'Exchange' },
 ]
 
 export default {

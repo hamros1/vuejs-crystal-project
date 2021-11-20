@@ -5,9 +5,7 @@
     <router-link to="/register"></router-link>
     <router-link to="/dashboard"></router-link>
   </div>
-  <div class="min-h-screen optimize-legibility font-mono antialiased flex flex-col bg-[#1b1a2a] bg-hero-pattern">
-    <router-view/>
-  </div>
+  <router-view/>
 </template>
 
 <script>
