@@ -1,0 +1,13 @@
+{
+    "tailwindCSS.includeLanguages": {
+        "vue": "html",
+        "js": "html",
+        "ecr": "html"
+    },
+    "files.autoSave": "onWindowChange",
+    "editor.codeLensFontFamily": "InconsolataLGC Nerd Font Mono",
+    "editor.fontFamily": "InconsolataLGC Nerd Font Mono",
+    "editor.inlayHints.fontFamily": "InconsolataLGC Nerd Font Mono",
+    "scm.inputFontFamily": "InconsolataLGC Nerd Font Mono",
+    "debug.console.fontFamily": "InconsolataLGC Nerd Font Mono"
+}
