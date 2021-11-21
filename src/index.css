@@ -6,13 +6,17 @@
   .optimize-legibility {
     text-rendering: optimizeLegibility;
   }
+
   .wh-full {
     height: 100%;
     width: 100%;
   }
+
   .d-flex {
     display: flex !important;
   }
+
+  .clip-auto {
+    clip: rect(auto, auto, auto, auto);
+  }
 }
-
-
