@@ -13,10 +13,10 @@
     :options="{
       background: {
         color: {
-          value: '#111827',
+          value: '#1B1F24',
         },
       },
-      fpsLimit: 60,
+      fpsLimit: 120,
       interactivity: {
         events: {
           onClick: {
@@ -47,11 +47,11 @@
       },
       particles: {
         color: {
-          value: '#A78BFA',
+          value: '#84EDC1',
         },
         links: {
-          color: '#A78BFA',
-          distance: 150,
+          color: '#84EDC1',
+          distance: 100,
           enable: true,
           opacity: 0.5,
           width: 1,
