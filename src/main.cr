@@ -14,15 +14,15 @@ get "/" do |x|
   ecr("layout")
 end
 
-get "/login" do |x|
+get "/portfolio" do |x|
   ecr("layout")
 end
 
-get "/register" do |x|
+get "/wallet" do |x|
   ecr("layout")
 end
 
-get "/dashboard" do |x|
+get "/exchange" do |x|
   ecr("layout")
 end
 
