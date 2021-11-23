@@ -29,6 +29,7 @@
     "postcss-loader": "^6.2.0",
     "tsparticles": "^1.37.4",
     "vue": "3",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vue3-carousel": "^0.1.30"
   }
 }
