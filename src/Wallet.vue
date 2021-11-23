@@ -15,7 +15,7 @@
 	      0.00
 	    </span>
 	  </div>
-	  <div class="relative flex flex-wrap space-x-2 justify-center">
+	  <div class="relative flex flex-wrap space-x-2 justify-center items-center">
 	    <div>
 	      <button class="relative flex-none px-4 bg-transparent rounded-xl border border border-amber-500 hover:bg-gray-900">Send</button>
 	    </div>
