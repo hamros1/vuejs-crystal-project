@@ -1,22 +1,28 @@
 <template>
   <div class="bg-gray-800 min-h-screen m-0 text-white font-sans antialiased optimize-legibility">
-    <nav class="fixed inset-0 z-5 bg-opacity-50">
-      <div class="relative flex flex-wrap">
-	<div class="flex flex-1 items-center justify-start space-x-2">
-	  <button class="text-xl text-white font-medium">$0.00</button>
-	</div>
-	<div class="flex flex-1 items-center justify-center space-x-2">
-	</div>
-	<div class="flex flex-1 justify-end">
+    <div class="relative flex-flex-row min-w-screen min-h-[37px] bg-black">
+    </div>
+    <div class="relative flex flex-row min-w-screen min-h-[37px] bg-transparent">
+      <div v-for="index in cryptos" :key="index.name" class="relative w-full flex flex-col items-center justify-center">
+	<div class="hidden sm:block">
+	  <div class="mx-auto text-white text-xs font-medium">
+	    {{index.name}}
+	  </div>
+	  <div class="mx-auto text-gray-200 text-xs font-medium tracking-wide leading-none uppercase">
+	    0 {{index.name}}
+	  </div>
 	</div>
       </div>
-    </nav>
-    <div class="relative max-w-md mx-auto overflow-hidden">
-      <div class="pt-24 pb-4">
+    </div>
+    <div class="pt-[17vh] relative">
+      <div class="max-w-md mx-auto items-center text-center justify-center overflow-hidden">
 	<div class="flex relative flex-col">
 	  <div class="z-10 absolute inset-0">
 	    <div class="mx-auto relative flex top-1/2 translate-y-[-50%] shadow-md justify-center items-center text-center">
-	      <button class="px-[5px] py-[1px] bg-gray-900 shadow-xl rounded-md border border-black border-opacity-60 text-white text-xs font-medium tracking-widest uppercase opacity-100 hover:opacity-90"><span>Swap</span></button>
+	      <button class="px-[5px] py-[1px] bg-gray-900 shadow-xl rounded-md text-white text-xs font-medium tracking-widest uppercase opacity-100 hover:opacity-90"><span><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white fill-current stroke-1" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+</svg></span></button>
 	    </div>
 	  </div>
 	  <div class="h-1/2 relative p-4 bg-gray-900 flex flex-wrap flex-row justify-between rounded-t-xl">
@@ -68,40 +74,55 @@
 	    </div>
 	  </div>
 	</div>
-      </div>
 
-      <div class="w-full flex flex-row relative pb-6 rounded-xl">
-	<div class="w-1/3 flex-none">
-	  <button class="rounded-l-xl text-center w-full bg-gray-900 text-white text-sm tracking-tight leading-8 uppercase opacity-100 hover:opacity-90">
-	    Min
-	  </button>
+	<div class="w-full flex flex-row relative pt-4 pb-6 rounded-xl">
+	  <div class="w-1/3 flex-none">
+	    <button class="rounded-l-xl text-center w-full bg-gray-900 text-white text-sm tracking-tight leading-8 uppercase opacity-100 hover:opacity-90">
+	      Min
+	    </button>
+	  </div>
+	  <div class="w-1/3 flex-none">
+	    <button class="text-center w-full bg-gray-900 text-white text-sm tracking-tight leading-8 uppercase opacity-100 hover:opacity-90">
+	      Half
+	    </button>
+	  </div>
+	  <div class="w-1/3 flex-none">
+	    <button class="rounded-r-xl text-center w-full bg-gray-900 text-white text-sm tracking-tight leading-8 uppercase opacity-100 hover:opacity-90">
+	      Max
+	    </button>
+	  </div>
 	</div>
-	<div class="w-1/3 flex-none">
-	  <button class="text-center w-full bg-gray-900 text-white text-sm tracking-tight leading-8 uppercase opacity-100 hover:opacity-90">
-	    Half
-	  </button>
-	</div>
-	<div class="w-1/3 flex-none">
-	  <button class="rounded-r-xl text-center w-full bg-gray-900 text-white text-sm tracking-tight leading-8 uppercase opacity-100 hover:opacity-90">
-	    Max
-	  </button>
-	</div>
-      </div>
 
-      <button class="py-2 text-center w-full flex-none bg-gradient-to-r from-pink-400 to-purple-600 text-sm tracking-wide leading-none uppercase rounded-xl opacity-100 hover:opacity-90">
-	Enter amount
-      </button>
-      <div class="py-[5px] flex items-center justify-center text-center flex-wrap text-sm text-gray-400 tracking-wide leading-none uppercase">
-	0.00 BTC = 0.00 ETH
+	<button class="py-2 text-center w-full flex-none bg-gradient-to-r from-pink-400 to-purple-600 text-sm tracking-wide leading-none uppercase rounded-xl opacity-100 hover:opacity-90">
+	  Enter amount
+	</button>
+	<div class="py-[5px] flex items-center justify-center text-center flex-wrap text-sm text-gray-400 tracking-wide leading-none uppercase">
+	  0.00 BTC = 0.00 ETH
+	</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+let cryptos = [
+  {name: "Bitcoin"},
+  {name: "Ethereum"},
+  {name: "Binance Coin"},
+  {name: "Tether USD"},
+  {name: "Cardano"},
+  {name: "XRP"},
+  {name: "Polkadot"},
+  {name: "USD Coin"},
+  {name: "Litecoin"},
+];
+
+
+
 export default {
   data() {
     return {
+      cryptos,
     }
   }
 }
