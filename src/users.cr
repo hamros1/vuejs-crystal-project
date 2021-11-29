@@ -25,8 +25,8 @@ def get_user(sid, headers, db, refresh = true)
 			token = Base64.urlsafe_encode(Random::Secure.random_bytes(32))
 
 			user = User.new({
-				updated: Time.utc
-				email: nil,
+				updated: Time.utc,
+				email: String.new,
 				password: nil,
 				token: token,
 			})

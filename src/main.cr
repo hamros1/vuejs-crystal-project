@@ -1,5 +1,6 @@
 require "kemal"
 require "pg"
+require "./macros.cr"
 require "./users.cr"
 require "./utils.cr"
 require "./tokens.cr"
@@ -8,48 +9,44 @@ require "./errors.cr"
 
 HMAC_KEY = Random::Secure.hex(32)
 
-PG_DB = DB.open ""
+PG_DB = DB.open "postgresql://kemal:kemal@localhost/dev"
 
 before_all do |env|
-	if Kemal.config.ssl
-		env.response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains; preload"
-
-		if env.request.cookies.has_key? "SID"
-			sid = env.request.cookies["SID"].value
-
-			if sid.starts_with? "v1:"
-				raise "Cannot use token as SID"
-			end
-
-			if email = PG_DB.query_one?("SELECT email FROM session_ids WHERE id = $1", sid, as: String)
+	env.response.headers["X-XSS-Protection"] = "1; mode=block"
+	env.response.headers["X-Content-Type-Options"] = "nosniff"
+	env.response.headers["Referrer-Policy"] = "interest-cohort=()"
+	
+	if env.request.cookies.has_key? "SID"
+		sid = env.request.cookies["SID"].value
+		
+		if email = PG_DB.query_one?("SELECT email FROM session_ids WHERE id = $1", sid, as: String)
+			begin
 				user = PG_DB.query_one("SELECT * FROM users WHERE email = $1", email, as: User)
 				csrf_token = generate_response(sid, {
-					":authorize_token",
-					":signout",
-					":token_ajax",
+					":signout"
 				}, HMAC_KEY, PG_DB, 1.week)
-
+				
 				env.set "sid", sid
 				env.set "csrf_token", csrf_token
-				env.set "user", user
-		end
-
-		current_page = env.request.path
-
-		if env.request.query
-			query = HTTP::Params.parse(env.request.query.not_nil!)
-
-			if query["referer"]?
-				query["referer"] = get_referer(env, "/")
+			rescue ex
 			end
-
-			current_page += "?#{query}"
 		end
-
-		env.set "current_page", URI.encode_www_form(current_page)
 	end
+	
+	current_page = env.request.path
+	if env.request.query
+		query = HTTP::Params.parse(env.request.query.not_nil!)
+
+		if query["referer"]?
+			query["referer"] = get_referer(env, "/")
+		end
+		
+		current_page += "?#{query}"
+	end
+	
+	env.set "current_page", URI.encode_www_form(current_page)
 end
-end
+
 
 macro ecr(xxx)
 	{% if xxx.starts_with?('_') %}
@@ -60,6 +57,10 @@ macro ecr(xxx)
 end
 
 get "/" do |x|
+	ecr("layout")
+end
+
+get "/login" do |x|
 	ecr("layout")
 end
 
