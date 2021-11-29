@@ -3,15 +3,11 @@
 </template>
 
 <script>
-import Portfolio from "./Portfolio.vue";
-import Wallet from "./Wallet.vue";
-import Exchange from "./Exchange.vue";
+import Home from "./Home.vue";
 
 export default {
   components: {
-    Portfolio,
-    Wallet,
-    Exchange,
+    Home,
   },
 };
 </script>

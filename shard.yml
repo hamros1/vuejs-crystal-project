@@ -10,6 +10,8 @@ version: 0.1.0
 dependencies:
   kemal:
     github: kemalcr/kemal
+  pg:
+    github: will/crystal-pg
 
 targets:
   dev:

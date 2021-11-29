@@ -1,0 +1,2 @@
+class InfoException < Exception
+end
