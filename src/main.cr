@@ -56,11 +56,15 @@ macro ecr(xxx)
 	{% end %}
 end
 
-get "/" do |x|
+get "/" do |env|
 	ecr("layout")
 end
 
-get "/login" do |x|
+get "/login" do |env|
+	ecr("layout")
+end
+
+get "/register" do |env|
 	ecr("layout")
 end
 
